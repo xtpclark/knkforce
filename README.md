@@ -67,6 +67,20 @@ needed. But the real plus for me would be to add a vacuum pump and do some pick
 and place of parts PLUS use the camera for visual checks! That's hopefully what
 I'll be able to do with this project - and lots of work to get there!
 
+### Testing on Other Linux (Fedora)
+First, satisfy the other requirements.
+To create a satisfactory TTY device if you do not have a plotter attached, you can use `socat`.
+
+As root, run:
+socat PTY,link=/dev/ttyAMA0 PTY,link=/dev/ttyAMA1
+
+Then, run as root:
+python server.py
+
+And navigate your browser to:
+http://localhost
+
+
 ### Disclaimer
 This project was started by James Muraca to run on a KNK Force and the source is
 available at [GitHub](https://github.com/jmuraca/knkforce/). I've learnt a lot
@@ -82,3 +96,4 @@ The Klic-N-Kut name and logo, and the KNK Force name and logo, are trademarks of
 
 KNK Force is distributed in Australia and New Zealand by
 [Skat Katz](http://www.skatkatz.com.au).
+

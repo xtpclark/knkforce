@@ -1,7 +1,7 @@
 import os
 from flask import Flask, request, render_template
 from werkzeug import secure_filename
-from Cutter import Cutter
+from cutter import Cutter
 
 UPLOAD_FOLDER = './static/svg/'
 ALLOWED_EXTENSIONS = set(['svg'])
